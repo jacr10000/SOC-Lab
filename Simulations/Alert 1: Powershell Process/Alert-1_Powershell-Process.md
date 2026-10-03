@@ -1,6 +1,8 @@
 # Alert: Powershell process spawned Powershell instance
 
-In this case, we investigate an alert provoked by a Powershell process spawning a Powershell instance. This is categorized as an Execution-type MITRE ATT&CK tactic.
+In this case, we investigate an alert provoked by a Powershell process spawning a Powershell instance. 
+
+This is categorized as an Execution-type MITRE ATT&CK tactic.
 
 ## Context
 
