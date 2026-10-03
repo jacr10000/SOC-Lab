@@ -29,5 +29,16 @@ We pay attention to the following fields:
  
 The file was a text file and later deleted, so the event seems harmless and under control. However, we still don't know where the file came from, and no alerts were triggered from it.
 
-We now take a look at Wireshark to inspect our packet capture (PCAP) and determine whether the file came from a foreign device.
+We now take a look at Wireshark to inspect our packet capture (PCAP) around the time of the event and determine whether the file came from a foreign device. Since we suspect a download, we filter for GET HTTP requests:
 
+![Screenshot of Wireshark HTTP download](./Images/Wireshark_persistence.png)
+
+We find a GET request with the name of the file that was found in the Startup folder, with the source having the victim's IP address. Inspecting the response packet from the server, we can also see that the text file contained only one line of natural text, confirming it was harmless. 
+
+![Screenshot of Wireshark server response](./Images/Wireshark_server_response.png)
+
+## Conclusion
+
+The suspicious file was a harmless text document, downloaded from a server through an HTTP request, and added to the Startup folder. 
+
+While malicious intent is not evident, the foreign server should be flagged as a precaution, and events of similar nature should lead to further investigations, should they occur.
