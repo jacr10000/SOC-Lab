@@ -14,7 +14,7 @@ Since regular operations don't usually require this nested workflow, it is easy 
 
 The following image shows the description of the alert:
 
-![Screenshot of Powershell Execution event alert](../images/Powershell_Process_description.png)
+![Screenshot of Powershell Execution event alert](./Images/Powershell_Process_description.png)
 
 To figure out if this is a malicious event, the main fields we will pay attention to are the following:
 
