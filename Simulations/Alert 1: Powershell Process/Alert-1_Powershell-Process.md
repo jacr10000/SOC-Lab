@@ -20,23 +20,14 @@ The following image shows the description of the alert:
 
 To figure out if this is a malicious event, the main fields we will pay attention to are the following:
 
-- Image: "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
-  - It tells us the event ended up executing Powershell.
-
-- Command line: "\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -Command \"Start-Process notepad.exe\""
-  - The line of code that was executed stated that Powershell should open and execute the last statement.
- 
-- Parent Image: "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
-  - The code itself was executed through Powershell.
- 
--  User: "WINDOWS11-VM\\jacr"
-    - A known user.
-
-- Event ID: 1
-  - Refers to Sysmon Process Create. It means a new process was started.
- 
-- Timestamp: "Sep 30, 2026 @ 18:06:21.014"
-  - Events around this time are unrelated to this one.
+| Field          | Content | Comments |
+| ------------- | --------------- | ------------------ |
+| Image       | "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"      | It tells us the event ended up executing Powershell         |
+| Command Line      | "\"C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe\" -NoProfile -Command \"Start-Process notepad.exe\""         | The line of code that was executed stated that Powershell should open and execute the last statement         |
+| Parent Image          | "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"           | The code itself was executed through Powershell         |
+| User          | "WINDOWS11-VM\\jacr" | A known user |
+| Event ID | 1 | Refers to Sysmon Process Create. It means a new process was started |
+| Timestamp        | Sep 30, 2026 @ 18:06:21.014     | Events around this time are unrelated to this one         |
 
 ## Conclusion
 Based on the event data, it is safe to assume this is a harmless, isolated event (provided it doesn't repeat in the near future).
