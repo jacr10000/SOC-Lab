@@ -1,4 +1,4 @@
-# SOC-Lab
+# SOC Attacks Simulations
 
 This repository contains the documentation of attack simulations conducted within the virtualization software VirtualBox.
 
