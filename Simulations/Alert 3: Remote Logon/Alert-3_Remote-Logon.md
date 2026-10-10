@@ -16,7 +16,7 @@ By using a remote host and the right credentials, an attacker can impersonate a 
 
 The following image shows the description of the alert:
 
-
+<img src="./Images/Wazuh_discovery.png" alt="Plot" width="400">
 
 We pay attention to the following fields:
 
@@ -37,7 +37,7 @@ Some of the commands listed in the following alerts are:
 
 Since we have the attacker's IP address, we can further investigate the situation through our packet capture in Wireshark:
 
-
+<img src="./Images/Wireshark_discovery.png" alt="Plot" width="400">
 
 We observe that the communication protocol used by the attacker was SMB2 on port 445, whose entries take place after the logon alert's timestamp. SMB3 also allowed their commands to be encrypted, so we cannot inspect them in Wireshark and rely on the Wazuh alerts to know what information was obtained.
 
