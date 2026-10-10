@@ -14,7 +14,7 @@ Any manipulation of this folder requires evaluation, to avoid repeatedly having 
 
 The following image shows the description of the alert:
 
-![Screenshot of File added to Startup Folder event alert](./Images/Added_file_to_startup.png)
+<img src="./Images/Added_file_to_startup.png" alt="Plot" width="400">
 
 We pay attention to the following fields:
 
